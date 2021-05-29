@@ -1,0 +1,605 @@
+/*Accounted for Objects: Header + Background + Text + Sidebar + Page Controls + Flyout Menus + Kanban */
+/*Based On: H@ckzF(0wy by Xeraikit (userstyles.org/styles/121590) */
+/*Tools Used: Chrome DevTools; Element Picker extension */
+/*Methodology: for Selector paths, prioritize readable Class names; Use ".div" parent for as many properties as possible and Override when necessary */ 
+
+
+/*-------------------------------------*/
+/* Most Text Boxes, Texts, and Symbols */
+/*-------------------------------------*/
+/* Lowest layer */
+body { 
+    background: rgba(0, 0, 0, .75) !important; /* "!important": override*/
+    border: none;
+}
+/* Side Bar Bulleted Text; Various Icons Globally; Loading Screen */
+div  
+{
+    color: rgb(26, 255, 0) !important; /*Buttons*/
+    background-color: rgba(0, 0, 0, 0) ;
+}
+/* Popup */
+div#app ._ej81c1
+{ 
+    background: rgba(0, 0, 0, .85) ;
+}
+/* Various Buttons: Side Bar, Side Bar Pin, List Style */
+div#app .iconButton:hover 
+{
+    background: rgba(129, 129, 129, .35); 
+}
+/* Font for most text */
+body, #page-container {
+    font-family: monospace, Monospaced; /*'Consolas' !important; */
+    font-size: 17px !important;
+    font-weight: normal !important;
+    overflow-y: scroll;
+    overflow-x: hidden !important; 
+}
+/* All Scrollbars */
+::-webkit-scrollbar 
+{
+      width: 10px;
+}
+::-webkit-scrollbar-track 
+{
+      background: rgba(129, 129, 129, .15) !important; 
+}
+::-webkit-scrollbar-thumb {
+      background: rgba(129, 129, 129) !important; 
+} 
+
+/*--------*/
+/* Header */
+/*--------*/
+div#app > .header { 
+    background-color: rgba(43, 43, 43, .85);
+    border: none;
+}
+/* Sets default background for Header children to help prevent phantom white spaces */ 
+div#app > .header * > div /*Interrpretation: Header, all Children on the next level below, that are div Elements*/
+{ 
+    background: inherit;
+    border: none;
+}
+/* Header Text */
+div#app > .header > .breadcrumbs > a
+{
+    color: rgb(255, 72, 0) !important;
+}
+/* Breadcrumb Ellipses Button */
+div#app > .header > .breadcrumbs > div > div._nb9fn4:hover 
+{
+    background: rgba(129, 129, 129, .35);
+}
+/* Breadcrumb Ellipses Dropdown Menu */
+div#app > .header > .breadcrumbs > div > .flyout > div a.fs-block
+{
+    color: rgba(255, 255, 255, .35) !important;  
+}
+/* Show Completed */
+div#app > .header  > ._1y5pwwt:hover
+{
+    background: rgb(129, 129, 129,.35); 
+}
+/* Show Completed Toggle - Background */
+div#app > .header  > div > ._1yqk6eh 
+{
+    background: rgb(129, 129, 129,.35);
+}
+/* Show Completed - Button */
+div#app > .header  > div > div > ._zc4km7 
+{    
+    background: rgba(43, 43, 43, .85);
+}
+/* SearchBox Text */
+div#app > .header  > div > .searchBox > div > .searchBoxInput
+{
+    color: rgb(255, 255, 255);
+    background-color: rgb(43, 43, 43);
+    
+    border: 1px  dashed rgba(255, 255, 255, .5); 
+}
+/* SearchBox Button (magnifying glass) */
+div#app > .header  > div > .searchBox:hover > div > svg 
+{ 
+        color: rgb(255, 255, 255) !important; 
+}
+div#app > .header  > div > .searchBox:hover 
+{ 
+    background: inherit !important;
+}
+/* Dropdown Button in Searchbox */   
+div#app > .header > div > .searchBox > div > div > div:hover 
+{
+    background: rgba(129, 129, 129, .35);
+}
+/* SearchBox Flyout Menu */
+div#app > .header  > div > .searchBox > div > div > .flyout.menu
+{
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-top: -1px !important;
+    background: rgb(50, 50, 50) !important;
+    border: none;
+}
+/* SearchBox Flyout Menu Items */
+div#app > .header  > div > .searchBox .flyout.menu a.menuItem  
+{
+    color: rgba(255, 255, 255, .9) !important; 
+    background: rgba(129, 129, 129, .35) !important; 
+}
+div#app > .header  > div > .searchBox > div > div > .flyout.menu a.menuItem:hover
+{ 
+    background: rgba(129, 129, 129, .2) !important;
+}
+/* Dates Dropdown Button */
+div#app > .header > div > .searchBox a.menuItem:hover .menuItemIcon > svg
+{
+    color: rgb(255, 255, 255) !important; 
+}
+/* SearchBox results */
+div#app > .header  > div > .searchBox > div .flyout.menu
+{  
+    background: rgb(50, 50, 50) !important; 
+}
+div#app > .header  > div > .searchBox > div .flyout.menu > a.menuItem 
+{  
+    background: rgb(50, 50, 50) !important; 
+}
+div#app > .header  > div > .searchBox > div .flyout.menu > a.menuItem *
+{   
+    filter: brightness(250%);
+    color: rgb(26, 255, 0) !important;
+}
+div#app > .header  > div > .searchBox > div .flyout.menu > a.menuItem:hover *
+{  
+    filter: brightness(150%);
+    color: rgb(0, 222, 222) !important;
+}
+
+/* Button at the end */
+div#app > .header > .menu:focus > div._8wqfrb, div#app > .header > .menu > div._8wqfrb:hover
+{
+    background: rgba(129, 129, 129, .35) !important; 
+}
+div#app > .header > .menu > div > .flyout.menu 
+{
+    background: rgb(43, 43, 43) ;
+    border: none; 
+}
+/* Flyout Menu Dividers */
+div#app > .header > .menu > div > .flyout.menu > div
+{ 
+    border-width: .1px;
+    border-style: dashed;
+    border-color: rgba(129, 129, 129, .85);     
+}
+/* Flyout Menu Text - Future Feature, handle when undo or redo is not available */
+div#app > .header > .menu > div > .flyout.menu  > .menuItem
+{
+    color: rgb(255, 255, 255, .85) !important; 
+}
+div#app > .header > .menu > div > .flyout.menu > .menuItem:hover
+{
+    background: rgba(129, 129, 129, .35);
+    border: none; 
+}
+
+/*---------------*/
+/* Page Controls */
+/*---------------*/
+div#app > .pageControls
+{background-color: rgb(43, 43, 43);}
+div#app > .pageControls > .starButton:hover
+{
+    background-color: rgba(129, 129, 129, .35);
+}
+/* List Style Flyout Menu */
+div#app > .pageControls > .menu > div > .flyout.menu
+{
+    background-color: rgb(43, 43, 43);
+    border: none;
+}
+div#app > .pageControls > .menu > div > .flyout.menu a.menuItem  
+{
+    color: rgba(255, 255, 255, .9) ;  
+}
+div#app > .pageControls > .menu > div > .flyout.menu a.menuItem:hover  
+{ 
+    background: rgba(129, 129, 129, .35) ; 
+} 
+/* Button at the end */
+div#app > .pageControls > .menu > div._5piaxi
+{
+    background-color: inherit;
+}
+div#app > .pageControls > .menu > div._5piaxi:hover
+{
+    background-color: rgba(129, 129, 129, .35);
+}
+/* Flyout Menu Dividers */
+div#app > .pageControls > .menu > div > .flyout.menu > ._8bzqax
+{ 
+    border-width: .1px;
+    border-style: dashed;
+    border-color: rgba(129, 129, 129, .85);     
+}
+/* Flyout Menu Text */
+div#app > .header > .menu > div > .flyout.menu  > .menuItem
+{
+    color: rgb(184, 184, 184); 
+}
+div#app > .header > .menu > div > .flyout.menu > .menuItem:hover
+{
+    background: rgba(129, 129, 129, .35);
+    border: none; 
+}
+
+/*----------*/
+/* Side Bar */
+/*----------*/
+div#app > .leftBar > div > .scroller 
+{ 
+    background: rgb(43, 43, 43);
+}
+/* The 2nd background used to prevent artifacting when hovering over items */
+div#app > .leftBar > div * > div
+{ 
+    background: rgb(43, 43, 43);
+} 
+/* "New node" */
+div#app button 
+{
+    color: rgba(255, 255, 255, .9) !important;
+    background: rgb(43, 43, 43) !important;
+}
+div#app button:hover 
+{
+    color: rgb(255, 255, 255) !important;
+    background: rgb(57, 57, 57) !important;
+}
+/* Accesses every dropdown button no matter how far zoomed in the element is */
+div#app > .leftBar > div >  .scroller *:hover > * > * > * 
+{ 
+    color: rgb(255, 248, 37) ; 
+}
+ 
+/*---------------*/
+/* Main Text Box */
+/*---------------*/
+/* Outline */
+.page {
+    /*
+    border-radius: 6px !important;
+    box-shadow: 1px 1px 10px 0 rgba(255,255,255,0.29) !important;
+    */
+    border: none;
+    background: rgba(38, 38, 38, 0);
+} 
+/* Text Color */
+div > .content {
+    color: 	rgba(255, 255, 255, .95) !important; 
+} 
+/* Background - When Dragged */
+/*  note: color must match Main TextBox Background*/
+.project.highlighted::before,
+.project.moving::before,
+.project.tapped::before,
+.draggableNameClone::before 
+{ background: rgba(255, 255, 255, .1) !important; }
+
+/*------------------*/
+/* Notes Text Color */
+/*------------------*/
+div#app > .pageContainer > .page.active > .project .notes > .content 
+{
+    color: rgb(0, 222, 222) !important; /* override "div" to give distinction to the note text from the main text */
+}
+
+/*----------------*/
+/* Kanban TextBox */
+/*----------------*/
+/* Title + Items */
+div#app > .pageContainer > .page.active > .project > .children > .project .name 
+{
+    background: transparent;    
+}
+/* All Textboxes */
+div#app > .pageContainer > .page.active .project 
+{
+    background: transparent;
+    border-color: rgba(129, 129, 129, 0);
+}
+/* Items */
+div#app > .pageContainer > .page.active > .project > .children._u6tqrf > .project:focus-within,
+div#app > .pageContainer > .page.active > .project > .children._u6tqrf > .project:hover 
+{ 
+    border-width: 1px;
+    border-color: rgb(129, 129, 129); 
+    border-style: dashed;
+    background: transparent;  
+}
+/* "Add new item" */
+div#app > .pageContainer > .page.active > .project * > ._k10p6h:hover 
+{
+    background: rgba(129, 129, 129, .35);  
+}
+/* "Add new column" */
+div#app > .pageContainer > .page.active > .project * > div._ddotq2
+{
+    background: rgba(129, 129, 129, .35);    
+}
+div#app > .pageContainer > .page.active > .project * > div._ddotq2:hover
+{
+    background: rgba(129, 129, 129, .25);  
+}
+ 
+/*--------------*/
+/* Bullet Point */
+/*--------------*/
+div#app > .pageContainer > .page.active > .project > .children > .project .name a.bullet 
+{
+    color: rgb(86, 156, 214) ;
+}
+div#app > .pageContainer > .page.active > .project > .children > .project .name a.bullet:hover /* Background of shape */
+{
+    background: rgba(129, 129, 129, .35) ; 
+}
+/* Bullet Point with child items */
+div#app > .pageContainer > .page.active > .project > .children > .project.collapsed .name a.bullet 
+{
+    background: rgba(129, 129, 129, .35) ; 
+}
+div#app > .pageContainer > .page.active > .project > .children > .project.noted.collapsed .name a.bullet svg:hover
+{
+    color: rgb(26, 255, 0);
+}
+/* Kanban Bullet Container Background */
+div#app > .pageContainer > .page.active > .project > .children a.bullet::before
+{
+    background: rgba(129, 129, 129, .35) ;  
+}
+/* Kanban Bullet Point with child items */
+div#app > .pageContainer > .page.active > .project > .children .project.collapsed .name a.bullet::after 
+{
+    background: rgba(129, 129, 129, .35) ; 
+    border: 0px ; 
+}
+/* "Add new item" */
+div#app > .pageContainer > .page.active > .project * > ._1fduk2u > .circle
+{
+    fill: rgba(129, 129, 129, .75) ;
+}
+div#app > .pageContainer > .page.active > .project * > svg > line /* a period before Line prevents selecting both Lines */
+/* The element type doesn't use a period; the element name does */
+{
+    stroke: rgb(255, 255, 255);
+}
+
+
+/*---------------*/
+/* Expand Button */
+/*---------------*/
+div#app > .pageContainer > .page.active > .project > .children > .project > .name a.expand 
+{
+    color: rgb(129, 129, 129) ;  
+}
+div#app > .pageContainer > .page.active > .project > .children > .project .name:hover a.expand  
+{ 
+    color: rgb(86, 156, 214);
+}
+
+/*------------------------*/
+/* Item Dropdown Button */
+/*------------------------*/
+div#app > .pageContainer > .page.active > .project .name .menu.itemMenu:focus svg._upuht8, svg._upuht8:hover 
+{
+   background: rgba(129, 129, 129, .2); 
+}
+/* Flyout Menu */
+body > div .flyout.menu
+{
+    background-color: rgb(43, 43, 43);
+    border: none;
+}
+body > div .flyout.menu div._vhsmp1, body > div .flyout.menu div._8bzqax
+{
+    border-width: .1px;
+    border-style: dashed;
+    border-color: rgba(129, 129, 129, .85);   
+} 
+/* Flyout Menu Items */ 
+body > div .flyout.menu .menuItem
+{
+    color: rgba(255, 255, 255, .9) ; 
+}
+body > div .flyout.menu div:hover, a.menuItem:hover, a.menuItem.active
+{
+    background: rgba(129, 129, 129, .35);
+    border: none; 
+}
+ 
+/*-----------------------*/
+/* Tag, Date Flyout Menu */
+/*-----------------------*/
+div#app .flyout
+{
+    background-color: rgba(43, 43, 43, .95);
+    border: none;
+}
+
+/*---*/
+/*Tag*/
+/*---*/
+.contentTag {
+    font-weight: bold !important;
+    padding: 2px 3px !important;
+    color: limegreen !important;
+    /* grey by default(#888888)*/
+    background-color: rgba(34, 139, 34, 0.4);
+    border: 1px solid forestgreen;
+    font-size: 14px !important;
+}
+.contentTag:hover {
+    background-color: limegreen !important;
+    color: black !important;
+    border: 1px solid lime;
+}
+/*hide the tags when editing */
+.content.editing .contentTag {
+    visibility: hidden;
+}
+/* remove the underline from tags */
+.content .contentTagText {
+    text-decoration: none !important;
+}
+
+/*-----------------*/
+/* Hierarchy Lines */
+/*-----------------*/
+div#app > .pageContainer > .page.active > .project > .children > .project .children
+{
+    border-left: 1px dashed rgb(129, 129, 129); 
+} 
+/* for kanban */
+div#app > .pageContainer > .page.active > .project.board > .children > .project .children
+{
+    border-left: none; 
+} 
+
+/*-------------*/
+/* Other Menus */
+/*-------------*/
+/* Keyboard Shortcuts */
+div#app > .shortcutsSidebar
+{
+    background-color: rgba(43, 43, 43, .85);
+}
+/* Minimize/Maximize Button */
+div#app > .shortcutsSidebar > ._1tudlzq
+{
+    background-color: rgba(43, 43, 43, .85);
+    border-left: none;
+    border-right: 1px dotted rgba(255, 255, 255, .2);
+}
+
+
+/*===============================================================================*/
+/* ??? */
+div.top.edge {
+    display: none;
+}
+
+div.bottom.edge {
+    display: none;
+}
+
+div.left.edge {
+    display: none;
+}
+
+div.right.edge {
+    display: none;
+}
+
+DIV.top.right.corner {
+    display: none;
+}
+
+DIV.top.left.corner {
+    display: none;
+}
+
+DIV.bottom.right.corner {
+    display: none;
+}
+
+DIV.bottom.left.corner {
+    display: none;
+}
+
+/*===============================================================================*/
+
+/*
+#backgroundImage 
+{background: rgb(0,0,0) !important;}
+*/
+
+/* (has some effect on word spacing)
+.edge,
+.corner {background-color: transparent !important;}
+*/
+
+/*
+.getMoreSpaceButton,
+.siteSlogan {display: none;}
+*/
+
+/*
+.proPitch,
+.proPitch:hover {display: none !important;}
+*/
+ 
+/* (Main Text - Border - When Dragged)
+.highlight {
+    height: 100%;
+    left: -5px;
+    padding: 2px 5px 1px;
+    position: absolute;
+    top: 2px;
+    width: 100%;
+}
+*/
+
+/*
+span.plus {
+    color: #cfcfcf !important;
+}
+*/
+ 
+/* (BulletPoint Menu TextBoxes)
+span.text {
+    color: #cfcfcf !important;
+}
+*/
+
+/*
+.moving > .highlight,
+.highlighted > .highlight {
+    background: #0F0F0F !important;
+}
+*/
+
+/*
+.moving > .highlight,
+.highlighted.moveHovered > .highlight {
+    background: #0F0F0F !important;
+}
+*/
+
+
+/* 
+#move {
+    color: #ffffff !important;
+    background: #cccccc !important;
+    background: url("http://www.workflowy.com/media/i/move_icon_white.png") no-repeat !important;
+}
+*/
+
+/* 
+.expandPlus,
+.expandMinus {
+    color: #cfcfcf !important;
+}
+*/
+
+/* 
+.content .contentMatch {
+    background-color: #484848 !important;
+}
+.project.metaMatches:not(.addedToSelection) > .name > .content > .innerContentContainer,
+.project.metaMatches:not(.addedToSelection) > .notes > .content > .innerContentContainer {
+    background-color: transparent !important;
+}
+*/
